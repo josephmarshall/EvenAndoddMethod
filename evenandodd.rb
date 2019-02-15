@@ -3,16 +3,20 @@ class Sorting
         evenNumbers = []
         oddNumbers = []
         chaff = []
+        numbers = {even: evenNumbers,
+                    odd: oddNumbers,
+                    chaff: chaff}
+
         intArray.each do |num|
             if num % 2 == 0
-            evenNumbers << num
+            numbers[:even] << num
             elsif (num.to_f - 1) % 2 == 0
-            oddNumbers << num
+            numbers[:odd] << num
             else
-            chaff << num
+            numbers[:chaff] << num
             end
         end
-    return evenNumbers, oddNumbers, chaff
+    return numbers
     end
 end
 
