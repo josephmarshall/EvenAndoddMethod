@@ -1,12 +1,8 @@
 class Sorting
     def self.evenOdd(intArray)
-        evenNumbers = []
-        oddNumbers = []
-        chaff = []
-        numbers = {even: evenNumbers,
-                    odd: oddNumbers,
-                    chaff: chaff}
-
+        numbers = {even: [],
+                    odd: [],
+                    chaff: []}
         intArray.each do |num|
             if num % 2 == 0
             numbers[:even] << num
